@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
-import { Cube, Sphere, Cylinder, Sun, RotateCcw, ZoomIn } from 'lucide-react';
+import { Cuboid, Sun, RotateCcw, ZoomIn } from 'lucide-react';
 
 interface ToolbarProps {
   onAddObject: (type: string) => void;
@@ -16,13 +16,13 @@ const Toolbar: React.FC<ToolbarProps> = ({ onAddObject, onRotate, onZoom }) => {
     <div className="p-2 bg-muted rounded-lg flex flex-wrap gap-2 items-center">
       <div className="mr-2 text-sm font-medium">Objects:</div>
       <Button variant="outline" size="sm" onClick={() => onAddObject('cube')} className="flex items-center gap-1">
-        <Cube className="h-4 w-4" /> Cube
+        <Cuboid className="h-4 w-4" /> Cube
       </Button>
       <Button variant="outline" size="sm" onClick={() => onAddObject('sphere')} className="flex items-center gap-1">
-        <Sphere className="h-4 w-4" /> Sphere
+        <Cuboid className="h-4 w-4" /> Sphere
       </Button>
       <Button variant="outline" size="sm" onClick={() => onAddObject('cylinder')} className="flex items-center gap-1">
-        <Cylinder className="h-4 w-4" /> Cylinder
+        <Cuboid className="h-4 w-4" /> Cylinder
       </Button>
       
       <div className="h-6 w-px bg-border mx-2"></div>

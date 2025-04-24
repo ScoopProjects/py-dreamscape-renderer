@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Cube } from 'lucide-react';
+import { Cuboid } from 'lucide-react';
 
 interface SceneDisplayProps {
   isLoading: boolean;
@@ -25,13 +25,13 @@ const SceneDisplay: React.FC<SceneDisplayProps> = ({ isLoading, sceneActive }) =
         ) : sceneActive ? (
           <div className="canvas-placeholder">
             <div className="rotate-slow mb-2">
-              <Cube className="w-32 h-32 text-primary" />
+              <Cuboid className="w-32 h-32 text-primary" />
             </div>
             <div>Scene rendered successfully</div>
           </div>
         ) : (
           <div className="canvas-placeholder">
-            <Cube className="w-32 h-32 mb-2 text-muted-foreground" />
+            <Cuboid className="w-32 h-32 mb-2 text-muted-foreground" />
             <div>Run the code to see your 3D scene</div>
           </div>
         )}
