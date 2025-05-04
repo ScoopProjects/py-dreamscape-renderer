@@ -52,6 +52,13 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Dortania-specific colors
+				dortania: {
+					primary: '#1EAEDB',
+					secondary: '#7E69AB',
+					dark: '#1A1F2C',
+					gray: '#8E9196',
 				}
 			},
 			borderRadius: {
@@ -75,11 +82,23 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'rotate-3d': {
+					from: {
+						transform: 'rotate3d(1, 1, 1, 0deg)'
+					},
+					to: {
+						transform: 'rotate3d(1, 1, 1, 359deg)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'rotate-3d': 'rotate-3d 20s infinite linear'
+			},
+			fontFamily: {
+				'system': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
 			}
 		}
 	},
